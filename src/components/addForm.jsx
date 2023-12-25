@@ -13,11 +13,7 @@ const AddForm = () => {
   const [offDay, setOffDay] = useState("");
   const [remarks, setRemarks] = useState("");
 
-  //
-  const projects = useProjects();
   const dispatch = useDispatchProjects();
-
-  // console.log(projects);
 
   // reset input value
   const resetInputValue = () => {
@@ -57,7 +53,7 @@ const AddForm = () => {
     );
 
     // reset
-    resetInputValue();
+    // resetInputValue();
   };
   return (
     <>

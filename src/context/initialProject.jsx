@@ -2,7 +2,7 @@
 export const initialProject = [
   {
     id: 1,
-    project: "Baridhara",
+    projectName: "Baridhara",
     siteWorker: 11,
     factoryWorker: 3,
     projectHead: "Sujon",

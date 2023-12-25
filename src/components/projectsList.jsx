@@ -1,4 +1,9 @@
+import { useProjects } from "../context/projectContext";
+import Project from "./project";
+
 const ProjectsList = () => {
+  const projects = useProjects();
+
   return (
     <>
       <div className="container mx-auto flex justify-center">
@@ -36,35 +41,9 @@ const ProjectsList = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="border border-slate-600 ">
-                <p>Baridhara (KSBL)</p>
-              </td>
-              <td className="border border-slate-600 w-20">
-                <p>13</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>2</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>Sujon</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>8am - 5pm</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>1hr</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>2hr</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>2-Friday (In a month)</p>
-              </td>
-              <td className="border border-slate-600 ">
-                <p>remarks</p>
-              </td>
-            </tr>
+            {projects.map((project) => (
+              <Project key={project.id} project={project} />
+            ))}
           </tbody>
         </table>
       </div>
