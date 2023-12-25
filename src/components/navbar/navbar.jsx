@@ -1,5 +1,5 @@
-import { FaCircleUser } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { FaCircleUser } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -7,7 +7,10 @@ const Navbar = () => {
       <div className="container mx-auto ">
         <nav className="flex items-center justify-between border-b pb-2 md:pb-3 px-3">
           <Link to="add-form">
-            <button className="btn btn-primary">Add</button>
+            <button className="btn btn-primary">
+              {' '}
+              <span className="text-xl">+</span> Add Project
+            </button>
           </Link>
           <div className="hidden md:block">
             <ul className="flex items-center space-x-5 uppercase">
@@ -27,7 +30,7 @@ const Navbar = () => {
         </nav>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

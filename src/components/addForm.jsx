@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useDispatchProjects, useProjects } from "../context/projectContext";
-import { addProject } from "../context/actions";
 
 const AddForm = () => {
   const [projectName, setProjectName] = useState("");
@@ -13,19 +11,18 @@ const AddForm = () => {
   const [offDay, setOffDay] = useState("");
   const [remarks, setRemarks] = useState("");
 
-  const dispatch = useDispatchProjects();
 
   // reset input value
-  const resetInputValue = () => {
-    setProjectName("");
-    setProjectHead("");
-    setManpowerSite("");
-    setManpowerFactory("");
-    setWorkingTime("");
-    setOverTime("");
-    setOffDay("");
-    setRemarks("");
-  };
+  // const resetInputValue = () => {
+  //   setProjectName("");
+  //   setProjectHead("");
+  //   setManpowerSite("");
+  //   setManpowerFactory("");
+  //   setWorkingTime("");
+  //   setOverTime("");
+  //   setOffDay("");
+  //   setRemarks("");
+  // };
 
   // handle add project
   const handleAddProject = (e) => {
@@ -39,18 +36,18 @@ const AddForm = () => {
     // setOffDay(offDay);
     // setRemarks(remarks);
 
-    dispatch(
-      addProject(
-        setProjectName(projectName),
-        setProjectHead(projectHead),
-        setManpowerSite(manpowerSite),
-        setManpowerFactory(manpowerFactory),
-        setWorkingTime(workingTime),
-        setOverTime(overTime),
-        setOffDay(offDay),
-        setRemarks(remarks)
-      )
-    );
+    // dispatch(
+    //   addProject(
+    //     setProjectName(projectName),
+    //     setProjectHead(projectHead),
+    //     setManpowerSite(manpowerSite),
+    //     setManpowerFactory(manpowerFactory),
+    //     setWorkingTime(workingTime),
+    //     setOverTime(overTime),
+    //     setOffDay(offDay),
+    //     setRemarks(remarks)
+    //   )
+    // );
 
     // reset
     // resetInputValue();

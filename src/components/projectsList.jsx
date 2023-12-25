@@ -1,8 +1,27 @@
-import { useProjects } from "../context/projectContext";
-import Project from "./project";
+import { useGetProjectsQuery } from '../features/api/apiSlice'
+import Project from './project'
 
 const ProjectsList = () => {
-  const projects = useProjects();
+  const { data: projects, isLoading, isError } = useGetProjectsQuery()
+
+  // decide what to render
+  let content = null
+
+  if (isLoading) {
+    content = <p className="text-rose-500">Loading...</p>
+  }
+
+  if (!isLoading && isError) {
+    content = <p className="text-rose-500">That was an error !</p>
+  }
+  if (!isLoading && !isError && projects.length === 0) {
+    content = <p className="text-rose-500">No projects found!</p>
+  }
+  if (!isLoading && !isError && projects.length > 0) {
+    content = projects.map((project) => (
+      <Project key={project.id} project={project} />
+    ))
+  }
 
   return (
     <>
@@ -40,15 +59,11 @@ const ProjectsList = () => {
               <th>Factory</th>
             </tr>
           </thead>
-          <tbody>
-            {projects.map((project) => (
-              <Project key={project.id} project={project} />
-            ))}
-          </tbody>
+          <tbody>{content}</tbody>
         </table>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ProjectsList;
+export default ProjectsList

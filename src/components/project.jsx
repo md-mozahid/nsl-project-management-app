@@ -1,5 +1,5 @@
 const Project = ({ project }) => {
-  console.log(project)
+  // console.log(project)
   const {
     projectName,
     siteWorker,
