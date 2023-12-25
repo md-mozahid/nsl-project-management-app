@@ -3,14 +3,37 @@
     {
       "id": 1,
       "projectName": "Baridhara",
-      "siteWorker": 11,
-      "factoryWorker": 3,
+      "manpowerSite": 11,
+      "manpowerFactory": 3,
       "projectHead": "Sujon",
       "workingTime": "8am - 5pm",
       "breakTime": "1hr",
       "overTime": "1hr",
       "offDay": "2-Friday (In a month)",
       "remarks": "remarks"
+    },
+    {
+      "id": 2,
+      "projectName": "Bashundhara",
+      "manpowerSite": 9,
+      "manpowerFactory": 0,
+      "projectHead": "Engineer",
+      "workingTime": "8am - 5pm",
+      "breakTime": "1hr",
+      "overTime": "1hr",
+      "offDay": "Friday",
+      "remarks": "remarks"
+    },
+    {
+      "projectName": "NR4",
+      "projectHead": "Engineer NSL",
+      "manpowerSite": 7,
+      "manpowerFactory": 0,
+      "workingTime": "7am - 4pm",
+      "overTime": "30min",
+      "offDay": "sunday",
+      "remarks": "no remarks",
+      "id": 3
     }
   ]
 }

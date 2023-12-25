@@ -21,4 +21,4 @@ export const apiSlice = createApi({
   }),
 })
 
-export const { useGetProjectsQuery } = apiSlice
+export const { useGetProjectsQuery, useAddProjectMutation } = apiSlice

@@ -1,16 +1,16 @@
 const Project = ({ project }) => {
-  // console.log(project)
+
   const {
     projectName,
-    siteWorker,
-    factoryWorker,
+    manpowerSite,
+    manpowerFactory,
     projectHead,
     workingTime,
     breakTime,
     overTime,
     offDay,
     remarks,
-  } = project;
+  } = project
 
   return (
     <>
@@ -19,10 +19,10 @@ const Project = ({ project }) => {
           <p>{projectName}</p>
         </td>
         <td className="border border-slate-600 w-20">
-          <p>{siteWorker}</p>
+          <p>{manpowerSite}</p>
         </td>
         <td className="border border-slate-600 ">
-          <p>{factoryWorker}</p>
+          <p>{manpowerFactory}</p>
         </td>
         <td className="border border-slate-600 ">
           <p>{projectHead}</p>
@@ -44,7 +44,7 @@ const Project = ({ project }) => {
         </td>
       </tr>
     </>
-  );
+  )
 };
 
 export default Project;
