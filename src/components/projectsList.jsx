@@ -1,5 +1,6 @@
 import { useGetProjectsQuery } from "../features/api/apiSlice";
 import Project from "./project";
+import TableTh from "./th";
 
 const ProjectsList = () => {
   const { data: projects, isLoading, isError } = useGetProjectsQuery();
@@ -26,42 +27,40 @@ const ProjectsList = () => {
   return (
     <>
       <div className="container mx-auto flex justify-center">
-        <table className="border-collapse border border-slate-500 text-center">
-          <thead>
-            <tr className="text-rose-400 md:text-xl">
-              <th className="border border-slate-600 px-10" rowSpan="2">
+        <table className="border-collapse border border-slate-400 text-center">
+          <thead className="bg-teal-800">
+            <tr className="text-slate-100 md:text-lg">
+              <TableTh className="w-40" rowSpan="2">
                 Projects
-              </th>
-              <th className="border border-slate-600 px-10" colSpan="2">
+              </TableTh>
+              <TableTh className="w-48" colSpan="2">
                 Manpower
-              </th>
-              <th className="border border-slate-600 px-5" rowSpan="2">
+              </TableTh>
+              <TableTh className="w-36" rowSpan="2">
                 Head
-              </th>
-              <th className="border border-slate-600 px-5" rowSpan="2">
+              </TableTh>
+              <TableTh className="w-40" rowSpan="2">
                 Working Time
-              </th>
-              <th className="border border-slate-600 px-5" rowSpan="2">
+              </TableTh>
+              <TableTh className="w-20" rowSpan="2">
                 Break
-              </th>
-              <th className="border border-slate-600 px-5" rowSpan="2">
+              </TableTh>
+              <TableTh className="w-28" rowSpan="2">
                 Over Time
-              </th>
-              <th className="border border-slate-600 px-16" rowSpan="2">
+              </TableTh>
+              <TableTh className="w-48" rowSpan="2">
                 Off Day
-              </th>
-              <th className="border border-slate-600 px-6" rowSpan="2">
+              </TableTh>
+              <TableTh className="w-52" rowSpan="2">
                 Remarks
-              </th>
+              </TableTh>
             </tr>
-            <tr className="md:text-xl text-rose-400">
-              <th className="border-r">Site</th>
-              <th>Factory</th>
+            <tr className="md:text-xl text-slate-100">
+              <TableTh className="w-24">Site</TableTh>
+              <TableTh className=''>Factory</TableTh>
             </tr>
           </thead>
-          <tbody>
-           {content}
-          </tbody>
+          <tbody className="rounded-xl">{content}</tbody>
         </table>
       </div>
     </>

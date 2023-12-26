@@ -1,37 +1,37 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAddProjectMutation } from '../features/api/apiSlice'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAddProjectMutation } from "../features/api/apiSlice";
 
 const AddProject = () => {
-  const [projectName, setProjectName] = useState('')
-  const [projectHead, setProjectHead] = useState('')
-  const [manpowerSite, setManpowerSite] = useState('')
-  const [manpowerFactory, setManpowerFactory] = useState('')
-  const [workingTime, setWorkingTime] = useState('')
-  const [overTime, setOverTime] = useState('')
-  const [breakTime, setBreakTime] = useState('')
-  const [offDay, setOffDay] = useState('')
-  const [remarks, setRemarks] = useState('')
+  const [projectName, setProjectName] = useState("");
+  const [projectHead, setProjectHead] = useState("");
+  const [manpowerSite, setManpowerSite] = useState("");
+  const [manpowerFactory, setManpowerFactory] = useState("");
+  const [workingTime, setWorkingTime] = useState("");
+  const [overTime, setOverTime] = useState("");
+  const [breakTime, setBreakTime] = useState("");
+  const [offDay, setOffDay] = useState("");
+  const [remarks, setRemarks] = useState("");
 
   const [addProject, { isLoading, isError, isSuccess }] =
-    useAddProjectMutation()
-  const navigate = useNavigate()
+    useAddProjectMutation();
+  const navigate = useNavigate();
 
   // reset input value
   const resetForm = () => {
-    setProjectName('')
-    setProjectHead('')
-    setManpowerSite('')
-    setManpowerFactory('')
-    setWorkingTime('')
-    setOverTime('')
-    setOffDay('')
-    setRemarks('')
-  }
+    setProjectName("");
+    setProjectHead("");
+    setManpowerSite("");
+    setManpowerFactory("");
+    setWorkingTime("");
+    setOverTime("");
+    setOffDay("");
+    setRemarks("");
+  };
 
   // handle add project
   const handleAddProject = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     addProject({
       projectName,
@@ -43,10 +43,10 @@ const AddProject = () => {
       overTime,
       offDay,
       remarks,
-    })
-    resetForm()
-    navigate('/')
-  }
+    });
+    resetForm();
+    navigate("/");
+  };
   return (
     <>
       <div className="max-w-[500px] mx-auto">
@@ -156,7 +156,7 @@ const AddProject = () => {
         </form>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default AddProject
+export default AddProject;

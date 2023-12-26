@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import TableTd from "./td";
 
 const Project = ({ project }) => {
   const {
@@ -12,45 +13,43 @@ const Project = ({ project }) => {
     overTime,
     offDay,
     remarks,
-  } = project
+  } = project;
 
   return (
     <>
-      <tr>
-        <td className="border border-slate-600 ">
+      <tr className="bg-slate-600 even:bg-slate-700 hover:bg-slate-800">
+        <TableTd>
           <Link to={`/edit-project/${id}`}>
-            <p className="cursor-pointer">
-              {projectName}
-            </p>
+            <p className="cursor-pointer">{projectName}</p>
           </Link>
-        </td>
-        <td className="border border-slate-600 w-20">
+        </TableTd>
+        <TableTd className="w-20">
           <p>{manpowerSite}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{manpowerFactory}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{projectHead}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{workingTime}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{breakTime}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{overTime}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{offDay}</p>
-        </td>
-        <td className="border border-slate-600 ">
+        </TableTd>
+        <TableTd>
           <p>{remarks}</p>
-        </td>
+        </TableTd>
       </tr>
     </>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

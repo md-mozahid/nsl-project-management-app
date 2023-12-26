@@ -3,9 +3,9 @@
     {
       "id": 1,
       "projectName": "Baridhara (ksbl)",
-      "manpowerSite": "Sujon",
-      "manpowerFactory": 11,
-      "projectHead": 3,
+      "manpowerSite": 11,
+      "manpowerFactory": 3,
+      "projectHead": "Sujon",
       "workingTime": "8am - 5pm",
       "breakTime": "1hr",
       "overTime": "1hr",
