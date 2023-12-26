@@ -26,38 +26,38 @@ const ProjectsList = () => {
 
   return (
     <>
-      <div className="container mx-auto flex justify-center">
-        <table className="border-collapse border border-slate-400 text-center">
+      <div className="">
+        <table className="table-auto border-collapse border border-slate-400 text-center">
           <thead className="bg-teal-800">
-            <tr className="text-slate-100 md:text-lg">
-              <TableTh className="w-40" rowSpan="2">
+            <tr className="text-slate-100 text-sm md:text-lg">
+              <TableTh className="md:w-40" rowSpan="2">
                 Projects
               </TableTh>
-              <TableTh className="w-48" colSpan="2">
+              <TableTh className="md:w-48 w-auto" colSpan="2">
                 Manpower
               </TableTh>
-              <TableTh className="w-36" rowSpan="2">
-               Project Head
+              <TableTh className="md:w-36 w-auto" rowSpan="2">
+                Project Head
               </TableTh>
-              <TableTh className="w-40" rowSpan="2">
+              <TableTh className="md:w-40 w-auto" rowSpan="2">
                 Working Time
               </TableTh>
-              <TableTh className="w-20" rowSpan="2">
+              <TableTh className="md:w-20 w-auto" rowSpan="2">
                 Break
               </TableTh>
-              <TableTh className="w-28" rowSpan="2">
+              {/* <TableTh className="md:w-28 w-auto" rowSpan="2">
                 Over Time
-              </TableTh>
-              <TableTh className="w-48" rowSpan="2">
+              </TableTh> */}
+              <TableTh className="md:w-48 w-auto" rowSpan="2">
                 Off Day
               </TableTh>
-              <TableTh className="w-52" rowSpan="2">
+              <TableTh className="md:w-52 w-auto" rowSpan="2">
                 Remarks
               </TableTh>
             </tr>
             <tr className="md:text-xl text-slate-100">
               <TableTh className="w-24">Site</TableTh>
-              <TableTh className=''>Factory</TableTh>
+              <TableTh className="">Factory</TableTh>
             </tr>
           </thead>
           <tbody className="rounded-xl">{content}</tbody>

@@ -168,12 +168,14 @@ const EditProjectForm = ({ project }) => {
             </div>
             <div className="">
               <label>Remarks</label>
-              <input
+              <textarea
                 type="text"
                 placeholder="Remarks"
                 className="inputElm"
                 value={remarks}
                 onChange={(e) => setRemarks(e.target.value)}
+                cols="30"
+                rows="2"
               />
             </div>
             <button className="btn btn-primary btn-fw mt-6">Update</button>

@@ -23,7 +23,7 @@ const Project = ({ project }) => {
             <p className="cursor-pointer">{projectName}</p>
           </Link>
         </TableTd>
-        <TableTd className="w-20">
+        <TableTd className="md:w-20 w-auto">
           <p>{manpowerSite}</p>
         </TableTd>
         <TableTd>
@@ -38,9 +38,9 @@ const Project = ({ project }) => {
         <TableTd>
           <p>{breakTime}</p>
         </TableTd>
-        <TableTd>
+        {/* <TableTd>
           <p>{overTime}</p>
-        </TableTd>
+        </TableTd> */}
         <TableTd>
           <p>{offDay}</p>
         </TableTd>

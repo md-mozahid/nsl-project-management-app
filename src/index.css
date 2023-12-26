@@ -6,9 +6,6 @@
   body {
     @apply bg-slate-700 text-white p-10;
   }
-  .container {
-    @apply max-w-7xl mx-auto;
-  }
   .inputElm {
     @apply w-full bg-slate-800 px-3 py-2  outline-0 rounded-md mt-2 mb-3 focus:bg-teal-800;
   }
