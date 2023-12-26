@@ -1,6 +1,8 @@
-const Project = ({ project }) => {
+import { Link } from 'react-router-dom'
 
+const Project = ({ project }) => {
   const {
+    id,
     projectName,
     manpowerSite,
     manpowerFactory,
@@ -16,7 +18,11 @@ const Project = ({ project }) => {
     <>
       <tr>
         <td className="border border-slate-600 ">
-          <p>{projectName}</p>
+          <Link to={`/edit-project/${id}`}>
+            <p className="cursor-pointer">
+              {projectName}
+            </p>
+          </Link>
         </td>
         <td className="border border-slate-600 w-20">
           <p>{manpowerSite}</p>
@@ -45,6 +51,6 @@ const Project = ({ project }) => {
       </tr>
     </>
   )
-};
+}
 
-export default Project;
+export default Project

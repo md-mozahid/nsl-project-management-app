@@ -11,6 +11,10 @@ export const apiSlice = createApi({
       query: () => '/projects',
     }),
 
+    getProject: builder.query({
+      query: (id) => `/projects/${id}`,
+    }),
+
     addProject: builder.mutation({
       query: (data) => ({
         url: '/projects',
@@ -18,7 +22,20 @@ export const apiSlice = createApi({
         body: data,
       }),
     }),
+
+    editProject: builder.mutation({
+      query: (id, data) => ({
+        url: `/projects/${id}`,
+        method: 'PATCH',
+        body: data,
+      }),
+    }),
   }),
 })
 
-export const { useGetProjectsQuery, useAddProjectMutation } = apiSlice
+export const {
+  useGetProjectsQuery,
+  useGetProjectQuery,
+  useAddProjectMutation,
+  useEditProjectMutation,
+} = apiSlice
