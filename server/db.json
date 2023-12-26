@@ -41,12 +41,24 @@
       "projectHead": "Engr. Orobindu",
       "manpowerSite": "6",
       "manpowerFactory": "1",
-      "workingTime": "6ap-6pm",
+      "workingTime": "6am - 6pm",
       "breakTime": "",
       "overTime": "1hr",
       "offDay": "Saturday",
       "remarks": "Work on progress..",
       "id": 4
+    },
+    {
+      "projectName": "BOF",
+      "projectHead": "Engr. Modasser Newaz",
+      "manpowerSite": "15",
+      "manpowerFactory": "2",
+      "workingTime": "6am - 6pm",
+      "breakTime": "30min",
+      "overTime": "0",
+      "offDay": "Friday",
+      "remarks": "work held up",
+      "id": 5
     }
   ]
 }
