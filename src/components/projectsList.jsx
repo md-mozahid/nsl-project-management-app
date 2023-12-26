@@ -37,7 +37,7 @@ const ProjectsList = () => {
                 Manpower
               </TableTh>
               <TableTh className="w-36" rowSpan="2">
-                Head
+               Project Head
               </TableTh>
               <TableTh className="w-40" rowSpan="2">
                 Working Time

@@ -20,12 +20,14 @@ const EditProjectForm = ({ project }) => {
   } = project;
 
   const [projectName, setProjectName] = useState(initialProjectName);
-  const [projectHead, setProjectHead] = useState(initialManpowerSite);
-  const [manpowerSite, setManpowerSite] = useState(initialManpowerFactory);
-  const [manpowerFactory, setManpowerFactory] = useState(initialProjectHead);
+  const [projectHead, setProjectHead] = useState(initialProjectHead);
+  const [manpowerSite, setManpowerSite] = useState(initialManpowerSite);
+  const [manpowerFactory, setManpowerFactory] = useState(
+    initialManpowerFactory
+  );
   const [workingTime, setWorkingTime] = useState(initialWorkingTime);
-  const [overTime, setOverTime] = useState(initialBreakTime);
-  const [breakTime, setBreakTime] = useState(initialOverTime);
+  const [overTime, setOverTime] = useState(initialOverTime);
+  const [breakTime, setBreakTime] = useState(initialBreakTime);
   const [offDay, setOffDay] = useState(initialOffDay);
   const [remarks, setRemarks] = useState(initialRemarks);
 

@@ -8,7 +8,6 @@ const Navbar = () => {
         <nav className="flex items-center justify-between border-b pb-2 md:pb-3 px-3">
           <Link to="add-form">
             <button className="btn btn-primary">
-              {' '}
               <span className="text-xl">+</span> Add Project
             </button>
           </Link>

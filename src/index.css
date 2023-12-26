@@ -10,13 +10,13 @@
     @apply max-w-7xl mx-auto;
   }
   .inputElm {
-    @apply w-full bg-slate-800 px-3 py-2 border border-[#475569] outline-0 rounded-md mt-2 mb-3 focus:border-rose-800;
+    @apply w-full bg-slate-800 px-3 py-2  outline-0 rounded-md mt-2 mb-3 focus:bg-teal-800;
   }
   .btn {
-    @apply text-center text-base uppercase font-medium px-10 py-2 border-0 rounded-full cursor-pointer;
+    @apply text-center text-base uppercase font-medium px-7 py-2 border-0 rounded-full cursor-pointer;
   }
   .btn-primary {
-    @apply bg-teal-600 hover:bg-teal-500 hover:transition-all;
+    @apply bg-teal-800 hover:bg-teal-600 hover:transition-all;
   }
   .btn-secondary {
     @apply bg-sky-600 hover:bg-sky-500 hover:transition-all;

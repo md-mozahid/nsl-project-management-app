@@ -1,50 +1,53 @@
+import TableTh from "./th";
+import TableTd from "./td";
+
 const CraneSchedule = () => {
   return (
     <>
       <div className="container mx-auto flex justify-center">
-        <table className="border-collapse border border-slate-500 text-center">
-          <thead>
-            <tr className="text-rose-400 md:text-xl">
-              <th className="border border-slate-600 px-10">Crane Capacity</th>
-              <th className="border border-slate-600 px-10">Nos</th>
-              <th className="border border-slate-600 px-5">Project</th>
-              <th className="border border-slate-600 px-5">Operator</th>
-              <th className="border border-slate-600 px-5">Working Time</th>
-              <th className="border border-slate-600 px-5">Break</th>
-              <th className="border border-slate-600 px-5">Over Time</th>
-              <th className="border border-slate-600 px-16">Off Day</th>
-              <th className="border border-slate-600 px-6">Remarks</th>
+        <table className="border-collapse border border-slate-400 text-center">
+          <thead className="bg-teal-800">
+            <tr className="text-slate-100 md:text-lg">
+              <TableTh className="w-40 py-3">Crane Capacity</TableTh>
+              <TableTh className="w-20 py-3">Nos</TableTh>
+              <TableTh className="w-40 py-3">Project</TableTh>
+              <TableTh className="w-32 py-3">Operator</TableTh>
+              <TableTh className="w-40 py-3">Working Time</TableTh>
+              <TableTh className="w-20 py-3">Break</TableTh>
+              <TableTh className="w-28 py-3">Over Time</TableTh>
+              <TableTh className="w-48 py-3">Off Day</TableTh>
+              <TableTh className="w-44 py-3">Remarks</TableTh>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border border-slate-600 ">
+              <TableTd>
                 <p>10 Ton</p>
-              </td>
-              <td className="border border-slate-600 w-20">
+              </TableTd>
+              <TableTd>
                 <p>1</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>Bridhara</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>Hridoy</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>8am - 5pm</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>1hr</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>2hr</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>2-Friday (In a month)</p>
-              </td>
-              <td className="border border-slate-600 ">
+              </TableTd>
+              <TableTd>
                 <p>remarks</p>
-              </td>
+              </TableTd>
             </tr>
           </tbody>
         </table>
