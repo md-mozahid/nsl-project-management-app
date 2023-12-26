@@ -1,14 +1,14 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
-  reducerPath: 'api',
+  reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:9000',
+    baseUrl: "http://localhost:9000",
   }),
 
   endpoints: (builder) => ({
     getProjects: builder.query({
-      query: () => '/projects',
+      query: () => "/projects",
     }),
 
     getProject: builder.query({
@@ -17,25 +17,25 @@ export const apiSlice = createApi({
 
     addProject: builder.mutation({
       query: (data) => ({
-        url: '/projects',
-        method: 'POST',
+        url: "/projects",
+        method: "POST",
         body: data,
       }),
     }),
 
     editProject: builder.mutation({
-      query: (id, data) => ({
+      query: ({ id, data }) => ({
         url: `/projects/${id}`,
-        method: 'PATCH',
+        method: "PATCH",
         body: data,
       }),
     }),
   }),
-})
+});
 
 export const {
   useGetProjectsQuery,
   useGetProjectQuery,
   useAddProjectMutation,
   useEditProjectMutation,
-} = apiSlice
+} = apiSlice;

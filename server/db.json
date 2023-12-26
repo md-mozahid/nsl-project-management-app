@@ -2,10 +2,10 @@
   "projects": [
     {
       "id": 1,
-      "projectName": "Baridhara",
-      "manpowerSite": 11,
-      "manpowerFactory": 3,
-      "projectHead": "Sujon",
+      "projectName": "Baridhara (ksbl)",
+      "manpowerSite": 3,
+      "manpowerFactory": "Sujon",
+      "projectHead": 11,
       "workingTime": "8am - 5pm",
       "breakTime": "1hr",
       "overTime": "1hr",
@@ -34,6 +34,18 @@
       "offDay": "sunday",
       "remarks": "no remarks",
       "id": 3
+    },
+    {
+      "projectName": "S.Alam1",
+      "projectHead": "6",
+      "manpowerSite": "1",
+      "manpowerFactory": "Orobindu",
+      "workingTime": "6ap-6pm",
+      "breakTime": "0",
+      "overTime": "1hr",
+      "offDay": "Saturday",
+      "remarks": "Work on progress..",
+      "id": 4
     }
   ]
 }

@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useEditProjectMutation } from '../features/api/apiSlice'
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useEditProjectMutation } from "../features/api/apiSlice";
 
 const EditProjectForm = ({ project }) => {
-  const [editProject, { isSuccess }] =
-    useEditProjectMutation()
-  const navigate = useNavigate()
+  const [editProject, { isSuccess }] = useEditProjectMutation();
+  const navigate = useNavigate();
 
   const {
     id,
@@ -18,33 +17,34 @@ const EditProjectForm = ({ project }) => {
     overTime: initialOverTime,
     offDay: initialOffDay,
     remarks: initialRemarks,
-  } = project
+  } = project;
 
-  const [projectName, setProjectName] = useState(initialProjectName)
-  const [projectHead, setProjectHead] = useState(initialManpowerSite)
-  const [manpowerSite, setManpowerSite] = useState(initialManpowerFactory)
-  const [manpowerFactory, setManpowerFactory] = useState(initialProjectHead)
-  const [workingTime, setWorkingTime] = useState(initialWorkingTime)
-  const [overTime, setOverTime] = useState(initialBreakTime)
-  const [breakTime, setBreakTime] = useState(initialOverTime)
-  const [offDay, setOffDay] = useState(initialOffDay)
-  const [remarks, setRemarks] = useState(initialRemarks)
+  const [projectName, setProjectName] = useState(initialProjectName);
+  const [projectHead, setProjectHead] = useState(initialManpowerSite);
+  const [manpowerSite, setManpowerSite] = useState(initialManpowerFactory);
+  const [manpowerFactory, setManpowerFactory] = useState(initialProjectHead);
+  const [workingTime, setWorkingTime] = useState(initialWorkingTime);
+  const [overTime, setOverTime] = useState(initialBreakTime);
+  const [breakTime, setBreakTime] = useState(initialOverTime);
+  const [offDay, setOffDay] = useState(initialOffDay);
+  const [remarks, setRemarks] = useState(initialRemarks);
 
   // reset input value
   const resetForm = () => {
-    setProjectName('')
-    setProjectHead('')
-    setManpowerSite('')
-    setManpowerFactory('')
-    setWorkingTime('')
-    setOverTime('')
-    setOffDay('')
-    setRemarks('')
-  }
+    setProjectName("");
+    setProjectHead("");
+    setManpowerSite("");
+    setManpowerFactory("");
+    setWorkingTime("");
+    setOverTime("");
+    setBreakTime("");
+    setOffDay("");
+    setRemarks("");
+  };
 
   // handle add project
   const handleEditProject = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     editProject({
       id,
@@ -59,16 +59,16 @@ const EditProjectForm = ({ project }) => {
         offDay,
         remarks,
       },
-    })
-    resetForm()
-  }
+    });
+    resetForm();
+  };
 
   // navigate to home
   useEffect(() => {
     {
-      isSuccess && navigate('/')
+      isSuccess && navigate("/");
     }
-  }, [isSuccess])
+  }, [isSuccess]);
 
   return (
     <>
@@ -179,7 +179,7 @@ const EditProjectForm = ({ project }) => {
         </form>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default EditProjectForm
+export default EditProjectForm;

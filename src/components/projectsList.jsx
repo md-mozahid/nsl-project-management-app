@@ -1,26 +1,26 @@
-import { useGetProjectsQuery } from '../features/api/apiSlice'
-import Project from './project'
+import { useGetProjectsQuery } from "../features/api/apiSlice";
+import Project from "./project";
 
 const ProjectsList = () => {
-  const { data: projects, isLoading, isError } = useGetProjectsQuery()
+  const { data: projects, isLoading, isError } = useGetProjectsQuery();
 
   // decide what to render
-  let content = null
+  let content = null;
 
   if (isLoading) {
-    content = <p className="text-rose-500">Loading...</p>
+    content = <p className="text-rose-500">Loading...</p>;
   }
 
   if (!isLoading && isError) {
-    content = <p className="text-rose-500">That was an error !</p>
+    content = <p className="text-rose-500">That was an error !</p>;
   }
   if (!isLoading && !isError && projects.length === 0) {
-    content = <p className="text-rose-500">No projects found!</p>
+    content = <p className="text-rose-500">No projects found!</p>;
   }
   if (!isLoading && !isError && projects.length > 0) {
     content = projects.map((project) => (
       <Project key={project.id} project={project} />
-    ))
+    ));
   }
 
   return (
@@ -59,11 +59,13 @@ const ProjectsList = () => {
               <th>Factory</th>
             </tr>
           </thead>
-          <tbody>{content}</tbody>
+          <tbody>
+           {content}
+          </tbody>
         </table>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ProjectsList
+export default ProjectsList;

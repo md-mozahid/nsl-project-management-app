@@ -15,7 +15,7 @@ const EditProject = () => {
   }
 
   if (!isLoading && isError) {
-    content = <p className="text-rose-500">That was an error !</p>
+    content = <p className="text-rose-500">That was an error!</p>
   }
   if (!isLoading && !isError && project.id) {
     content = <EditProjectForm project={project} />
