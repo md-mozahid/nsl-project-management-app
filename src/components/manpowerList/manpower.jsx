@@ -40,7 +40,6 @@ const Manpower = ({ manpower, isOpen, setIsOpen, closeModal, openModal }) => {
         setIsOpen={setIsOpen}
         closeModal={closeModal}
         manpower={manpower}
-        openModal={openModal}
       />
     </>
   );

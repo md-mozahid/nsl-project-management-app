@@ -5,7 +5,7 @@ import Button from "../button";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-const AddManpower = ({ isOpen, setIsOpen, closeModal, openModal }) => {
+const AddManpower = ({ isOpen, closeModal, manpower }) => {
   const [manpowerName, setManpowerName] = useState("");
   const [overTime, setOverTime] = useState("");
   const [remarks, setRemarks] = useState("");
@@ -35,51 +35,6 @@ const AddManpower = ({ isOpen, setIsOpen, closeModal, openModal }) => {
 
   return (
     <>
-      {/* <div className="max-w-[500px] mx-auto">
-        <h2 className="text-3xl uppercase text-center my-7">
-          Add Project Details
-        </h2>
-        <form onSubmit={handleAddManpower}>
-          <div className="border border-[#111827] p-5 rounded-lg">
-            <div className="">
-              <Label>Manpower Name</Label>
-              <input
-                type="text"
-                placeholder="Project name"
-                className="inputElm"
-                value={manpowerName}
-                onChange={(e) => setManpowerName(e.target.value)}
-              />
-            </div>
-
-            <div className="w-1/2">
-              <Label>Over Time</Label>
-              <input
-                type="text"
-                placeholder="Over time"
-                className="inputElm"
-                value={overTime}
-                onChange={(e) => setOverTime(e.target.value)}
-              />
-            </div>
-
-            <div className="">
-              <Label>Remarks</Label>
-              <textarea
-                type="text"
-                placeholder="Remarks"
-                className="inputElm"
-                value={remarks}
-                onChange={(e) => setRemarks(e.target.value)}
-                cols="30"
-                rows="2"
-              />
-            </div>
-            <Button className="btn-primary btn-fw">Add Manpower</Button>
-          </div>
-        </form>
-      </div> */}
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -105,7 +60,7 @@ const AddManpower = ({ isOpen, setIsOpen, closeModal, openModal }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-96 md:w-[600px]  md:max-w-lg transform overflow-hidden rounded-2xl bg-slate-700 p-6 align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-96 md:w-[400px]  md:max-w-lg transform overflow-hidden rounded-2xl bg-slate-700 p-6 align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-xl font-medium leading-6"
@@ -113,28 +68,28 @@ const AddManpower = ({ isOpen, setIsOpen, closeModal, openModal }) => {
                     {/* Player Details */}
                   </Dialog.Title>
 
-                  <div className="max-w-[500px] mx-auto">
-                    <h2 className="text-3xl uppercase text-center my-5">
+                  <div className="">
+                    <h2 className="md:text-2xl uppercase text-center mb-5">
                       Add Manpower
                     </h2>
                     <form onSubmit={handleAddManpower}>
-                      <div className="border border-[#111827] p-5 rounded-lg">
+                      <div className="border border-[#111827] p-5 rounded-lg text-left">
                         <div className="">
                           <Label>Manpower Name</Label>
                           <input
                             type="text"
-                            placeholder="Project name"
+                            placeholder="Manpower name"
                             className="inputElm"
                             value={manpowerName}
                             onChange={(e) => setManpowerName(e.target.value)}
                           />
                         </div>
 
-                        <div className="w-1/2">
+                        <div className="">
                           <Label>Over Time</Label>
                           <input
                             type="text"
-                            placeholder="Over time"
+                            placeholder="Over time (ex. 1hr or 1.30hr)"
                             className="inputElm"
                             value={overTime}
                             onChange={(e) => setOverTime(e.target.value)}
