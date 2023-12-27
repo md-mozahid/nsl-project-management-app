@@ -7,6 +7,7 @@ import CraneUpdate from "./pages/craneUpdate";
 import EditProject from "./pages/editProject";
 import Home from "./pages/home";
 import Layout from "./layout/layout";
+import ManpowerDetails from "./pages/manpowerDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/add-form" element={<AddProject />} />
               <Route path="/crane-update" element={<CraneUpdate />} />
+              <Route path="/manpower-site" element={<ManpowerDetails />} />
               <Route
                 path="/edit-project/:projectId"
                 element={<EditProject />}

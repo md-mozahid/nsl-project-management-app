@@ -24,7 +24,9 @@ const Project = ({ project }) => {
           </Link>
         </TableTd>
         <TableTd className="md:w-20 w-auto">
-          <p>{manpowerSite}</p>
+          <Link to="manpower-site">
+            <p>{manpowerSite}</p>
+          </Link>
         </TableTd>
         <TableTd>
           <p>{manpowerFactory}</p>

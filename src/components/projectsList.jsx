@@ -55,7 +55,7 @@ const ProjectsList = () => {
                 Remarks
               </TableTh>
             </tr>
-            <tr className="md:text-xl text-slate-100">
+            <tr className="md:text-xl text-sm text-slate-100">
               <TableTh className="md:w-24 w-auto">Site</TableTh>
               <TableTh className="md:w-24 w-auto">Factory</TableTh>
             </tr>

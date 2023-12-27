@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <div className="container mx-auto">
-        <nav className="md:inline-flex flex items-center justify-between border-b pb-2 md:pb-3 px-5">
+        <nav className="flex items-center justify-between border-b pb-2 md:pb-3 px-5">
           {/*  */}
           <div className="cursor-pointer z-30 relative md:hidden">
             <FaAlignJustify

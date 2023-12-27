@@ -1,18 +1,19 @@
-import ProjectsList from '../components/projectsList'
+import React from "react";
+import ManpowerList from "../components/manpowerList/manpowerList";
 
-const Home = () => {
+const ManpowerDetails = () => {
   return (
     <>
       <div className="">
         <h1 className="text-left md:text-center md:text-4xl font-bold md:py-10 py-5 uppercase">
-          Project List
+          Manpower Details
         </h1>
         <div className="flex justify-center">
-          <ProjectsList />
+          <ManpowerList />
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default ManpowerDetails;
