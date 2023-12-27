@@ -1,7 +1,20 @@
 import Manpower from "./manpower";
 import TableTh from ".././th";
+import Button from "../button";
+import { useState } from "react";
 
 const ManpowerList = () => {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+  const arr = [1, 2, 3];
+
   // // decide what to render
   // let content = null;
 
@@ -24,28 +37,30 @@ const ManpowerList = () => {
   return (
     <>
       <div className="">
+        <div className="text-center mb-7">
+          <Button className="btn-primary" onClick={openModal}>Add Manpower</Button>
+        </div>
         <table className="table-auto border-collapse border border-slate-400 text-center">
           <thead className="bg-teal-800">
             <tr className="text-slate-100 text-sm md:text-lg">
-              <TableTh className="md:w-48 w-auto">
-                Projects
-              </TableTh>
-              <TableTh className="md:w-48 w-auto">
-                Name
-              </TableTh>
-              <TableTh className="md:w-72 w-auto">
-                Project Head
-              </TableTh>
-              <TableTh className="md:w-32 w-auto">
-                Over Time
-              </TableTh>
-              <TableTh className="md:w-64 w-auto">
-                Remarks
-              </TableTh>
+              <TableTh className="md:w-48 w-auto">Projects</TableTh>
+              <TableTh className="md:w-48 w-auto">Name</TableTh>
+              <TableTh className="md:w-72 w-auto">Project Head</TableTh>
+              <TableTh className="md:w-32 w-auto">Over Time</TableTh>
+              <TableTh className="md:w-64 w-auto">Remarks</TableTh>
             </tr>
           </thead>
           <tbody className="rounded-xl">
-            <Manpower />
+            {arr.map((manpower, i) => (
+              <Manpower
+                key={i}
+                manpower={manpower}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                openModal={openModal}
+                closeModal={closeModal}
+              />
+            ))}
           </tbody>
         </table>
       </div>
