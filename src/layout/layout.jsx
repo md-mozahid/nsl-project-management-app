@@ -1,7 +1,7 @@
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="container px-6 py-10">
+      <div className="container mx-auto px-0">
         <div className="">{children}</div>
       </div>
     </>

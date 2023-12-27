@@ -4,7 +4,7 @@ import TableTd from "./td";
 const CraneSchedule = () => {
   return (
     <>
-      <div className="container mx-auto flex justify-center">
+      <div className="">
         <table className="border-collapse border border-slate-400 text-center">
           <thead className="bg-teal-800">
             <tr className="text-slate-100 md:text-lg">
