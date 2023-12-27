@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAddProjectMutation } from "../features/api/apiSlice";
+import Label from "../components/label";
 
 const AddProject = () => {
   const [projectName, setProjectName] = useState("");
   const [projectHead, setProjectHead] = useState("");
   const [manpowerSite, setManpowerSite] = useState("");
   const [manpowerFactory, setManpowerFactory] = useState("");
-  const [workingTime, setWorkingTime] = useState("");
+  const [workingTime, setWorkingTime] = useState("8am - 5pm");
   const [overTime, setOverTime] = useState("");
-  const [breakTime, setBreakTime] = useState("");
+  const [breakTime, setBreakTime] = useState("1hr");
   const [offDay, setOffDay] = useState("");
   const [remarks, setRemarks] = useState("");
 
@@ -56,7 +57,7 @@ const AddProject = () => {
         <form onSubmit={handleAddProject}>
           <div className="border border-[#111827] p-5 rounded-lg">
             <div className="">
-              <label>Project Name</label>
+              <Label>Project Name</Label>
               <input
                 type="text"
                 placeholder="Project name"
@@ -66,7 +67,7 @@ const AddProject = () => {
               />
             </div>
             <div className="">
-              <label>Project Head</label>
+              <Label>Project Head</Label>
               <input
                 type="text"
                 placeholder="Project head"
@@ -77,7 +78,7 @@ const AddProject = () => {
             </div>
 
             <div className="">
-              <label>Manpower</label>
+              <Label>Manpower</Label>
               <div className="flex space-x-3">
                 <input
                   type="number"
@@ -98,7 +99,7 @@ const AddProject = () => {
 
             <div className="flex space-x-3">
               <div className="w-1/2">
-                <label>Working Time</label>
+                <Label>Working Time</Label>
                 <input
                   type="text"
                   placeholder="Working time"
@@ -108,7 +109,7 @@ const AddProject = () => {
                 />
               </div>
               <div className="w-1/2">
-                <label>Break</label>
+                <Label>Break</Label>
                 <input
                   type="text"
                   placeholder="Break time"
@@ -121,7 +122,7 @@ const AddProject = () => {
 
             <div className="flex space-x-3">
               <div className="w-1/2">
-                <label>Over Time</label>
+                <Label>Over Time</Label>
                 <input
                   type="text"
                   placeholder="Over time"
@@ -131,7 +132,7 @@ const AddProject = () => {
                 />
               </div>
               <div className="w-1/2">
-                <label>Off Day</label>
+                <Label>Off Day</Label>
                 <input
                   type="text"
                   placeholder="Off day"
@@ -142,7 +143,7 @@ const AddProject = () => {
               </div>
             </div>
             <div className="">
-              <label>Remarks</label>
+              <Label>Remarks</Label>
               <textarea
                 type="text"
                 placeholder="Remarks"

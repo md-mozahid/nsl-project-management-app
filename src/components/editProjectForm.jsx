@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEditProjectMutation } from "../features/api/apiSlice";
+import Label from "./label";
 
 const EditProjectForm = ({ project }) => {
   const [editProject, { isSuccess }] = useEditProjectMutation();
@@ -81,7 +82,7 @@ const EditProjectForm = ({ project }) => {
         <form onSubmit={handleEditProject}>
           <div className="border border-[#111827] p-5 rounded-lg">
             <div className="">
-              <label>Project Name</label>
+              <Label>Project Name</Label>
               <input
                 type="text"
                 placeholder="Project name"
@@ -91,7 +92,7 @@ const EditProjectForm = ({ project }) => {
               />
             </div>
             <div className="">
-              <label>Project Head</label>
+              <Label>Project Head</Label>
               <input
                 type="text"
                 placeholder="Project head"
@@ -102,7 +103,7 @@ const EditProjectForm = ({ project }) => {
             </div>
 
             <div className="">
-              <label>Manpower</label>
+              <Label>Manpower</Label>
               <div className="flex space-x-3">
                 <input
                   type="number"
@@ -123,7 +124,7 @@ const EditProjectForm = ({ project }) => {
 
             <div className="flex space-x-3">
               <div className="w-1/2">
-                <label>Working Time</label>
+                <Label>Working Time</Label>
                 <input
                   type="text"
                   placeholder="Working time"
@@ -133,7 +134,7 @@ const EditProjectForm = ({ project }) => {
                 />
               </div>
               <div className="w-1/2">
-                <label>Break</label>
+                <Label>Break</Label>
                 <input
                   type="text"
                   placeholder="Break time"
@@ -146,7 +147,7 @@ const EditProjectForm = ({ project }) => {
 
             <div className="flex space-x-3">
               <div className="w-1/2">
-                <label>Over Time</label>
+                <Label>Over Time</Label>
                 <input
                   type="text"
                   placeholder="Over time"
@@ -156,7 +157,7 @@ const EditProjectForm = ({ project }) => {
                 />
               </div>
               <div className="w-1/2">
-                <label>Off Day</label>
+                <Label>Off Day</Label>
                 <input
                   type="text"
                   placeholder="Off day"
@@ -167,7 +168,7 @@ const EditProjectForm = ({ project }) => {
               </div>
             </div>
             <div className="">
-              <label>Remarks</label>
+              <Label>Remarks</Label>
               <textarea
                 type="text"
                 placeholder="Remarks"
