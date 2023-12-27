@@ -1,4 +1,4 @@
-import ProjectsList from "../components/projectsList";
+import ProjectsList from '../components/projectsList'
 
 const Home = () => {
   return (
@@ -7,10 +7,12 @@ const Home = () => {
         <h1 className="text-center md:text-4xl font-bold md:py-10 py-5 uppercase">
           Project List
         </h1>
-        <ProjectsList />
+        <div className="flex justify-center">
+          <ProjectsList />
+        </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

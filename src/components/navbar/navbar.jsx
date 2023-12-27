@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-      <div className="">
-        <nav className="md:flex items-center justify-between border-b pb-2 md:pb-3 px-3">
+      <div className="container mx-auto">
+        <nav className="md:flex items-center justify-between border-b pb-2 md:pb-3 px-5">
           <Link to="add-form">
             <button className="btn btn-primary btn-fw">
               <span className="text-xl">+</span> Add Project
@@ -29,7 +29,7 @@ const Navbar = () => {
         </nav>
       </div>
     </>
-  );
+  )
 }
 
 export default Navbar

@@ -38,9 +38,9 @@ const Project = ({ project }) => {
         <TableTd>
           <p>{breakTime}</p>
         </TableTd>
-        {/* <TableTd>
+        <TableTd>
           <p>{overTime}</p>
-        </TableTd> */}
+        </TableTd>
         <TableTd>
           <p>{offDay}</p>
         </TableTd>
