@@ -17,6 +17,8 @@ const EditProjectForm = ({ project }) => {
     breakTime: initialBreakTime,
     overTime: initialOverTime,
     offDay: initialOffDay,
+    startDate: initialStartDate,
+    endDate: initialEndDate,
     remarks: initialRemarks,
   } = project;
 
@@ -30,6 +32,8 @@ const EditProjectForm = ({ project }) => {
   const [overTime, setOverTime] = useState(initialOverTime);
   const [breakTime, setBreakTime] = useState(initialBreakTime);
   const [offDay, setOffDay] = useState(initialOffDay);
+  const [startDate, setStartDate] = useState(initialStartDate);
+  const [endDate, setEndDate] = useState(initialEndDate);
   const [remarks, setRemarks] = useState(initialRemarks);
 
   // reset input value
@@ -42,6 +46,8 @@ const EditProjectForm = ({ project }) => {
     setOverTime("");
     setBreakTime("");
     setOffDay("");
+    setStartDate("");
+    setEndDate("");
     setRemarks("");
   };
 
@@ -60,6 +66,8 @@ const EditProjectForm = ({ project }) => {
         breakTime,
         overTime,
         offDay,
+        startDate,
+        endDate,
         remarks,
       },
     });
@@ -164,6 +172,28 @@ const EditProjectForm = ({ project }) => {
                   className="inputElm"
                   value={offDay}
                   onChange={(e) => setOffDay(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="flex space-x-3">
+              <div className="w-1/2">
+                <Label>Start Date</Label>
+                <input
+                  type="text"
+                  placeholder="Start date"
+                  className="inputElm"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                />
+              </div>
+              <div className="w-1/2">
+                <Label>End Date</Label>
+                <input
+                  type="text"
+                  placeholder="End date"
+                  className="inputElm"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
                 />
               </div>
             </div>

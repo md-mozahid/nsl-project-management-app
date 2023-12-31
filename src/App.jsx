@@ -8,6 +8,7 @@ import EditProject from "./pages/editProject";
 import Home from "./pages/home";
 import Layout from "./layout/layout";
 import ManpowerDetails from "./pages/manpowerDetails";
+import OverTimes from "./pages/overTimes";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/add-form" element={<AddProject />} />
               <Route path="/crane-update" element={<CraneUpdate />} />
               <Route path="/manpower-site" element={<ManpowerDetails />} />
+              <Route path="/over-time" element={<OverTimes />} />
               <Route
                 path="/edit-project/:projectId"
                 element={<EditProject />}

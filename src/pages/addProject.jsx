@@ -12,6 +12,8 @@ const AddProject = () => {
   const [overTime, setOverTime] = useState("");
   const [breakTime, setBreakTime] = useState("1hr");
   const [offDay, setOffDay] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
   const [remarks, setRemarks] = useState("");
 
   const [addProject, { isLoading, isError, isSuccess }] =
@@ -27,6 +29,8 @@ const AddProject = () => {
     setWorkingTime("");
     setOverTime("");
     setOffDay("");
+    setStartDate("");
+    setEndDate("");
     setRemarks("");
   };
 
@@ -43,6 +47,8 @@ const AddProject = () => {
       breakTime,
       overTime,
       offDay,
+      startDate,
+      endDate,
       remarks,
     });
     resetForm();
@@ -142,6 +148,30 @@ const AddProject = () => {
                 />
               </div>
             </div>
+
+            <div className="flex space-x-3">
+              <div className="w-1/2">
+                <Label>Start Date</Label>
+                <input
+                  type="text"
+                  placeholder="Start date"
+                  className="inputElm"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                />
+              </div>
+              <div className="w-1/2">
+                <Label>End Date</Label>
+                <input
+                  type="text"
+                  placeholder="End date"
+                  className="inputElm"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                />
+              </div>
+            </div>
+
             <div className="">
               <Label>Remarks</Label>
               <textarea

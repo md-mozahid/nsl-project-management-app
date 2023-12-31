@@ -10,10 +10,13 @@ const Project = ({ project }) => {
     projectHead,
     workingTime,
     breakTime,
-    overTime,
+    totalOverTime,
     offDay,
+    startDate,
+    endDate,
     remarks,
   } = project;
+
 
   return (
     <>
@@ -41,10 +44,18 @@ const Project = ({ project }) => {
           <p>{breakTime}</p>
         </TableTd>
         <TableTd>
-          <p>{overTime}</p>
+          <Link to="/over-time">
+            <p>{totalOverTime}</p>
+          </Link>
         </TableTd>
         <TableTd>
           <p>{offDay}</p>
+        </TableTd>
+        <TableTd>
+          <p>{startDate}</p>
+        </TableTd>
+        <TableTd>
+          <p>{endDate}</p>
         </TableTd>
         <TableTd>
           <p>{remarks}</p>
