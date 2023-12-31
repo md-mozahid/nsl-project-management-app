@@ -16,6 +16,14 @@ export const apiSlice = createApi({
       query: (id) => `/projects/${id}`,
     }),
 
+    getProjectsOT: builder.query({
+      query: () => "/overtimes",
+    }),
+
+    getProjectOT: builder.query({
+      query: (otId) => `/overtimes/${otId}`,
+    }),
+
     addProject: builder.mutation({
       query: (data) => ({
         url: "/projects",
@@ -37,6 +45,8 @@ export const apiSlice = createApi({
 export const {
   useGetProjectsQuery,
   useGetProjectQuery,
+  useGetProjectsOTQuery,
+  useGetProjectOTQuery,
   useAddProjectMutation,
   useEditProjectMutation,
 } = apiSlice;

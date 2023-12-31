@@ -11,12 +11,8 @@
       "totalOverTime": "0",
       "offDay": "1-Friday (In running month)",
       "remarks": "Framing Erection completed, Tightening and Decking work in progress. Target to finish within 05/01/2024",
-      "startDate": "02-02-2023",
-      "endDate": "02-02-2025",
-      "manpowerName": "manpower name",
-      "overTime": "1hr",
-      "date": "01-01-2024",
-      "remarks2": "remarks"
+      "startDate": "",
+      "endDate": ""
     },
     {
       "id": 2,
@@ -29,12 +25,8 @@
       "totalOverTime": "0",
       "offDay": "No pending off day",
       "remarks": "Anchor bolt work in progress. Target to finish within 02/01/2024",
-      "startDate": "02-02-2024",
-      "endDate": "02-02-2024",
-      "manpowerName": "manpower name",
-      "overTime": "1hr",
-      "date": "01-01-2024",
-      "remarks2": "remarks"
+      "startDate": "",
+      "endDate": ""
     },
     {
       "projectName": "S.Alam Group (Chemical Godown)",
@@ -47,12 +39,8 @@
       "remarks": "Preparing for erection work. Erection work will start from 28/12/2023 (Proposed)",
       "id": 3,
       "breakTime": "1hr",
-      "startDate": "02-02-2024",
-      "endDate": "02-02-2024",
-      "manpowerName": "manpower name",
-      "overTime": "1hr",
-      "date": "01-01-2024",
-      "remarks2": "remarks"
+      "startDate": "",
+      "endDate": ""
     },
     {
       "projectName": "BOF",
@@ -65,12 +53,8 @@
       "offDay": "0",
       "remarks": "R.C.C Work on progress.",
       "id": 4,
-      "startDate": "02-02-2024",
-      "endDate": "02-02-2024",
-      "manpowerName": "manpower name",
-      "overTime": "1hr",
-      "date": "01-01-2024",
-      "remarks2": "remarks"
+      "startDate": "",
+      "endDate": ""
     },
     {
       "projectName": "Mondol Group (Eco-Intimates-BBT Bridge)",
@@ -83,12 +67,8 @@
       "offDay": "0",
       "remarks": "Proposed (Erection will start from 31/12/2023 and finish on 10/01/2024 on basis of available materials delivery)",
       "id": 5,
-      "startDate": "02-02-2024",
-      "endDate": "02-02-2024",
-      "manpowerName": "manpower name",
-      "overTime": "1hr",
-      "date": "01-01-2024",
-      "remarks2": "remarks"
+      "startDate": "",
+      "endDate": ""
     },
     {
       "projectName": "Expo Accessories Ltd. (Repair Work)",
@@ -101,12 +81,19 @@
       "offDay": "0",
       "remarks": "Check and Repair Crane Beam alignment and level (Proposed)",
       "id": 6,
-      "startDate": "02-02-2024",
-      "endDate": "02-02-2024",
+      "startDate": "",
+      "endDate": ""
+    }
+  ],
+
+  "overtimes": [
+    {
+      "otId": 1,
+      "projectName": "test project name",
       "manpowerName": "manpower name",
       "overTime": "1hr",
       "date": "01-01-2024",
-      "remarks2": "remarks"
+      "remarksOt": "remarks ot"
     }
   ]
 }

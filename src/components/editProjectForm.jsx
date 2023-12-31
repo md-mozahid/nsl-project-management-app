@@ -157,7 +157,7 @@ const EditProjectForm = ({ project }) => {
               <div className="w-1/2">
                 <Label>Over Time</Label>
                 <input
-                  type="text"
+                  type="number"
                   placeholder="Over time"
                   className="inputElm"
                   value={overTime}

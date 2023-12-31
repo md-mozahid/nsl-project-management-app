@@ -1,7 +1,7 @@
 import React from "react";
-import OverTime from "../components/overTime/overTime";
+import OverTimes from "../components/overTime/overTimes";
 
-const OverTimes = () => {
+const ProjectOverTimes = () => {
   return (
     <>
       <div className="">
@@ -9,11 +9,11 @@ const OverTimes = () => {
           Over Time List
         </h1>
         <div className="flex justify-center">
-          <OverTime />
+          <OverTimes />
         </div>
       </div>
     </>
   );
 };
 
-export default OverTimes;
+export default ProjectOverTimes;
