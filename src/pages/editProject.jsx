@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import EditProjectForm from "../components/editProjectForm";
 import { useGetProjectQuery } from "../features/api/apiSlice";
@@ -17,7 +16,7 @@ const EditProject = () => {
   if (!isLoading && isError) {
     content = <p className="text-rose-500">That was an error!</p>;
   }
-  if (!isLoading && !isError && project.id) {
+  if (!isLoading && !isError && project?.id) {
     content = <EditProjectForm project={project} />;
   }
 

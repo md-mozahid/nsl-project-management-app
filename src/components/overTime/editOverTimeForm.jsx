@@ -1,17 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAddOvertimeMutation } from "../../features/api/apiSlice";
+import { useEditOvertimeMutation } from "../../features/api/apiSlice";
 import Label from "../label";
 
-const OverTimeForm = () => {
-  const [projectName, setProjectName] = useState("");
-  const [manpowerName, setManpowerName] = useState("");
-  const [overTime, setOverTime] = useState("");
-  const [date, setDate] = useState("");
-  const [remarks, setRemarks] = useState("");
-
-  const [addOvertime, { isLoading, isError, isSuccess }] = useAddOvertimeMutation();
+const EditOverTimeForm = ({ overTimes }) => {
+  const [editOvertime, { isSuccess }] = useEditOvertimeMutation();
   const navigate = useNavigate();
+
+  console.log(overTimes);
+
+  const {
+    id,
+    projectName: initialProjectName,
+    manpowerName: initialManpowerName,
+    overTime: initialOverTime,
+    date: initialDate,
+    remarks: initialRemarks,
+  } = overTimes;
+
+  const [projectName, setProjectName] = useState(initialProjectName);
+  const [manpowerName, setManpowerName] = useState(initialManpowerName);
+  const [overTime, setOverTime] = useState(initialOverTime);
+  const [date, setDate] = useState(initialDate);
+  const [remarks, setRemarks] = useState(initialRemarks);
 
   // reset input value
   const resetForm = () => {
@@ -23,26 +34,36 @@ const OverTimeForm = () => {
   };
 
   // handle add project
-  const handleAddOverTime = (e) => {
+  const handleEditOT = (e) => {
     e.preventDefault();
 
-    addOvertime({
-      projectName,
-      manpowerName,
-      overTime,
-      date,
-      remarks,
+    editOvertime({
+      id,
+      data: {
+        projectName,
+        manpowerName,
+        overTime,
+        date,
+        remarks,
+      },
     });
     resetForm();
-    navigate("/over-time");
   };
+
+  // navigate to over time list
+  useEffect(() => {
+    {
+      isSuccess && navigate("/over-time");
+    }
+  }, [isSuccess]);
+
   return (
     <>
       <div className="max-w-[500px] mx-auto">
         <h2 className="text-3xl uppercase text-center my-7">
-          Add Manpower Details
+          Edit Project Details
         </h2>
-        <form onSubmit={handleAddOverTime}>
+        <form onSubmit={handleEditOT}>
           <div className="border border-[#111827] p-5 rounded-lg">
             <div className="">
               <Label>Project Name</Label>
@@ -92,14 +113,14 @@ const OverTimeForm = () => {
                 type="text"
                 placeholder="Remarks"
                 className="inputElm"
-                value={remarks}
-                onChange={(e) => setRemarks(e.target.value)}
+                value={remarksOt}
+                onChange={(e) => setRemarksOt(e.target.value)}
                 cols="30"
                 rows="2"
               />
             </div>
             <button className="btn btn-primary btn-fw mt-6">
-              Add Over Time
+              Update Over Time
             </button>
           </div>
         </form>
@@ -108,4 +129,4 @@ const OverTimeForm = () => {
   );
 };
 
-export default OverTimeForm;
+export default EditOverTimeForm;

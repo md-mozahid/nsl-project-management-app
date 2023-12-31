@@ -1,11 +1,11 @@
-import { useGetProjectsOTQuery } from "../../features/api/apiSlice";
+import { useGetOvertimesQuery } from "../../features/api/apiSlice";
 import { Link } from "react-router-dom";
 import Loader from "../loader";
 import OverTime from "./overTime";
 import TableTh from "../th";
 
 const OverTimes = () => {
-  const { data: projectOt, isLoading, isError } = useGetProjectsOTQuery();
+  const { data: projectOt, isLoading, isError } = useGetOvertimesQuery();
 
   // decide what to render
   let content = null;
@@ -21,7 +21,7 @@ const OverTimes = () => {
     content = <p className="text-rose-500">No data found!</p>;
   }
   if (!isLoading && !isError && projectOt.length > 0) {
-    content = projectOt.map((ot) => <OverTime key={ot.otId} ot={ot} />);
+    content = projectOt.map((ot) => <OverTime key={ot.id} ot={ot} />);
   }
 
   return (

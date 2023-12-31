@@ -10,6 +10,7 @@ import Layout from "./layout/layout";
 import ManpowerDetails from "./pages/manpowerDetails";
 import ProjectOverTimes from "./pages/projectOverTimes";
 import OverTimeForm from "./components/overTime/overTimeForm";
+import EditOverTimeForm from "./components/overTime/editOverTimeForm";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
               <Route path="/manpower-site" element={<ManpowerDetails />} />
               <Route path="/over-time" element={<ProjectOverTimes />} />
               <Route path="/over-time-form" element={<OverTimeForm />} />
+              <Route
+                path="/edit-over-time/:overTimeId"
+                element={<EditOverTimeForm />}
+              />
               <Route
                 path="/edit-project/:projectId"
                 element={<EditProject />}

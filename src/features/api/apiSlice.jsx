@@ -3,8 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://nsl-projects-server.onrender.com",
-    // baseUrl: "http://localhost:9000",
+    // baseUrl: "https://nsl-projects-server.onrender.com",
+    baseUrl: "http://localhost:3000",
   }),
 
   endpoints: (builder) => ({
@@ -16,12 +16,12 @@ export const apiSlice = createApi({
       query: (id) => `/projects/${id}`,
     }),
 
-    getProjectsOT: builder.query({
+    getOvertimes: builder.query({
       query: () => "/overtimes",
     }),
 
-    getProjectOT: builder.query({
-      query: (otId) => `/overtimes/${otId}`,
+    getOvertime: builder.query({
+      query: (id) => `/overtimes/${id}`,
     }),
 
     addProject: builder.mutation({
@@ -40,10 +40,18 @@ export const apiSlice = createApi({
       }),
     }),
 
-    addOT: builder.mutation({
+    addOvertime: builder.mutation({
       query: (data) => ({
         url: "/overtimes",
         method: "POST",
+        body: data,
+      }),
+    }),
+
+    editOvertime: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/overtimes/${id}`,
+        method: "PATCH",
         body: data,
       }),
     }),
@@ -53,9 +61,10 @@ export const apiSlice = createApi({
 export const {
   useGetProjectsQuery,
   useGetProjectQuery,
-  useGetProjectsOTQuery,
-  useGetProjectOTQuery,
+  useGetOvertimesQuery,
+  useGetOvertimeQuery,
   useAddProjectMutation,
   useEditProjectMutation,
-  useAddOTMutation,
+  useAddOvertimeMutation,
+  useEditOvertimeMutation,
 } = apiSlice;

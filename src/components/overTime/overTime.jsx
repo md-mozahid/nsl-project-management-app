@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
 import TableTd from "../td";
 
 const OverTime = ({ ot }) => {
-  const { otId, projectName, manpowerName, overTime, date, remarksOt } = ot;
+  const { id, projectName, manpowerName, overTime, date, remarks } = ot;
 
   return (
     <>
       <tr className="bg-slate-600 even:bg-slate-700 hover:bg-slate-800">
         <TableTd>
-          <p className="cursor-pointer">{projectName}</p>
+          <Link to={`/edit-over-time/${id}`}>
+            <p className="cursor-pointer">{projectName}</p>
+          </Link>
         </TableTd>
         <TableTd>
           <p>{manpowerName}</p>
@@ -19,7 +22,7 @@ const OverTime = ({ ot }) => {
           <p>{date}</p>
         </TableTd>
         <TableTd>
-          <p>{remarksOt}</p>
+          <p>{remarks}</p>
         </TableTd>
       </tr>
     </>
