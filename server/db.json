@@ -85,11 +85,10 @@
       "endDate": ""
     }
   ],
-
   "overtimes": [
     {
       "otId": 1,
-      "projectName": "test project name",
+      "projectName": "project name",
       "manpowerName": "manpower name",
       "overTime": "1hr",
       "date": "01-01-2024",

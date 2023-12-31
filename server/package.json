@@ -1,14 +1,14 @@
 {
-  "name": "nsl-json-server",
-  "description": "project management api with json-server",
+  "name": "server",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json  --no-cors true  --port 9000"
+    "start": "json-server --watch db.json"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "json-server": "^0.17.1"
-  },
-  "keywords": [],
-  "author": "nsl"
+    "json-server": "^0.17.4"
+  }
 }

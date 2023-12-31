@@ -4,7 +4,7 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     // baseUrl: "https://nsl-projects-server.onrender.com",
-    baseUrl: "http://localhost:9000",
+    baseUrl: "http://localhost:3000",
   }),
 
   endpoints: (builder) => ({
@@ -39,6 +39,14 @@ export const apiSlice = createApi({
         body: data,
       }),
     }),
+
+    addOT: builder.mutation({
+      query: (data) => ({
+        url: "/overtimes",
+        method: "POST",
+        body: data,
+      }),
+    }),
   }),
 });
 
@@ -49,4 +57,5 @@ export const {
   useGetProjectOTQuery,
   useAddProjectMutation,
   useEditProjectMutation,
+  useAddOTMutation
 } = apiSlice;
