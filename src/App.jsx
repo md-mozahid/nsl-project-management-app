@@ -27,7 +27,7 @@ function App() {
               <Route path="/over-time" element={<ProjectOverTimes />} />
               <Route path="/over-time-form" element={<OverTimeForm />} />
               <Route
-                path="/edit-over-time/:overTimeId"
+                path="/edit-overtime/:overTimeId"
                 element={<EditOverTimeForm />}
               />
               <Route

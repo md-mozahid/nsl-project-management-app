@@ -4,8 +4,9 @@ import { useGetOvertimeQuery } from "../features/api/apiSlice";
 
 const EditOverTime = () => {
   const { overTimeId } = useParams();
+
   const {
-    data: overTimes,
+    data: overtimes,
     isLoading,
     isError,
   } = useGetOvertimeQuery(overTimeId);
@@ -20,8 +21,9 @@ const EditOverTime = () => {
   if (!isLoading && isError) {
     content = <p className="text-rose-500">That was an error!</p>;
   }
-  if (!isLoading && !isError && overTimes?.id) {
-    content = <EditOverTimeForm overTimes={overTimes} />;
+
+  if (!isLoading && !isError && overtimes?.id) {
+    content = <EditOverTimeForm overtimes={overtimes} />;
   }
   return <>{content}</>;
 };

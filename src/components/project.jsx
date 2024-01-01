@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import TableTd from "./td";
 
-const Project = ({ project }) => {
+const Project = ({ project = {} }) => {
   const {
     id,
     projectName,

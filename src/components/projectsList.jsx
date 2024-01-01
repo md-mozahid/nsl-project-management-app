@@ -10,14 +10,34 @@ const ProjectsList = () => {
   let content = null
 
   if (isLoading) {
-    content = <Loader />
+    content = (
+      <tr>
+        <TableTh>
+          <Loader />
+        </TableTh>
+      </tr>
+    ); 
   }
 
   if (!isLoading && isError) {
-    content = <p className="text-rose-500 text-3xl">That was an error !</p>
+    content = (
+      <tr>
+        <TableTh>
+          <p className="text-rose-500 text-3xl">That was an error !</p>
+        </TableTh>
+      </tr>
+    );
+     
   }
   if (!isLoading && !isError && projects.length === 0) {
-    content = <p className="text-rose-500">No projects found!</p>
+    content = 
+    <tr>
+      <TableTh>
+<p className="text-rose-500">No projects found!</p>
+      </TableTh>
+    </tr>
+
+    
   }
   if (!isLoading && !isError && projects.length > 0) {
     content = projects.map((project) => (

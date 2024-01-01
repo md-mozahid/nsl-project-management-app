@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useEditProjectMutation } from "../features/api/apiSlice";
 import Label from "./label";
 
-const EditProjectForm = ({ project }) => {
+const EditProjectForm = ({ project = {} }) => {
   const [editProject, { isSuccess }] = useEditProjectMutation();
   const navigate = useNavigate();
 

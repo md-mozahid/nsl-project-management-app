@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useEditOvertimeMutation } from "../../features/api/apiSlice";
 import Label from "../label";
 
-const EditOverTimeForm = ({ overTimes }) => {
+const EditOverTimeForm = ({ overtimes = {} }) => {
   const [editOvertime, { isSuccess }] = useEditOvertimeMutation();
   const navigate = useNavigate();
 
-  console.log(overTimes);
+  // console.log(overTimes);
 
   const {
     id,
@@ -16,13 +16,15 @@ const EditOverTimeForm = ({ overTimes }) => {
     overTime: initialOverTime,
     date: initialDate,
     remarks: initialRemarks,
-  } = overTimes;
+  } = overtimes;
 
   const [projectName, setProjectName] = useState(initialProjectName);
   const [manpowerName, setManpowerName] = useState(initialManpowerName);
   const [overTime, setOverTime] = useState(initialOverTime);
   const [date, setDate] = useState(initialDate);
   const [remarks, setRemarks] = useState(initialRemarks);
+
+  console.log(projectName)
 
   // reset input value
   const resetForm = () => {
@@ -50,7 +52,7 @@ const EditOverTimeForm = ({ overTimes }) => {
     resetForm();
   };
 
-  // navigate to over time list
+  // navigate to overtime list
   useEffect(() => {
     {
       isSuccess && navigate("/over-time");
@@ -61,7 +63,7 @@ const EditOverTimeForm = ({ overTimes }) => {
     <>
       <div className="max-w-[500px] mx-auto">
         <h2 className="text-3xl uppercase text-center my-7">
-          Edit Project Details
+          Edit Overtime
         </h2>
         <form onSubmit={handleEditOT}>
           <div className="border border-[#111827] p-5 rounded-lg">

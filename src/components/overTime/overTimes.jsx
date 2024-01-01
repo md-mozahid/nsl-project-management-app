@@ -11,14 +11,32 @@ const OverTimes = () => {
   let content = null;
 
   if (isLoading) {
-    content = <Loader />;
+    content = (
+      <tr>
+        <TableTh>
+          <Loader />
+        </TableTh>
+      </tr>
+    );
   }
 
   if (!isLoading && isError) {
-    content = <p className="text-rose-500">That was an error !</p>;
+    content = (
+      <tr>
+        <TableTh>
+          <p className="text-rose-500">That was an error !</p>
+        </TableTh>
+      </tr>
+    );
   }
   if (!isLoading && !isError && projectOt.length === 0) {
-    content = <p className="text-rose-500">No data found!</p>;
+    content = (
+      <tr>
+        <TableTh>
+          <p className="text-rose-500">No data found!</p>;
+        </TableTh>
+      </tr>
+    );
   }
   if (!isLoading && !isError && projectOt.length > 0) {
     content = projectOt.map((ot) => <OverTime key={ot.id} ot={ot} />);

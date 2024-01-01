@@ -8,22 +8,27 @@ export const apiSlice = createApi({
   }),
 
   endpoints: (builder) => ({
+    // get all project
     getProjects: builder.query({
       query: () => "/projects",
     }),
 
+    // get single project
     getProject: builder.query({
       query: (id) => `/projects/${id}`,
     }),
 
+    // get all overtime list
     getOvertimes: builder.query({
       query: () => "/overtimes",
     }),
 
+    // get single overtime
     getOvertime: builder.query({
       query: (id) => `/overtimes/${id}`,
     }),
 
+    // add project
     addProject: builder.mutation({
       query: (data) => ({
         url: "/projects",
@@ -32,6 +37,7 @@ export const apiSlice = createApi({
       }),
     }),
 
+    // edit project
     editProject: builder.mutation({
       query: ({ id, data }) => ({
         url: `/projects/${id}`,
@@ -40,6 +46,7 @@ export const apiSlice = createApi({
       }),
     }),
 
+    // add overtime
     addOvertime: builder.mutation({
       query: (data) => ({
         url: "/overtimes",
@@ -48,6 +55,7 @@ export const apiSlice = createApi({
       }),
     }),
 
+    // edit overtime
     editOvertime: builder.mutation({
       query: ({ id, data }) => ({
         url: `/overtimes/${id}`,
@@ -55,6 +63,8 @@ export const apiSlice = createApi({
         body: data,
       }),
     }),
+
+    //
   }),
 });
 
