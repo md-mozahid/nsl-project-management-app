@@ -9,7 +9,7 @@ const AddProject = () => {
   const [manpowerSite, setManpowerSite] = useState("");
   const [manpowerFactory, setManpowerFactory] = useState("");
   const [workingTime, setWorkingTime] = useState("8am - 5pm");
-  const [overTime, setOverTime] = useState("");
+  const [totalOverTime, setTotalOverTime] = useState("");
   const [breakTime, setBreakTime] = useState("1hr");
   const [offDay, setOffDay] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -27,7 +27,7 @@ const AddProject = () => {
     setManpowerSite("");
     setManpowerFactory("");
     setWorkingTime("");
-    setOverTime("");
+    setTotalOverTime("");
     setOffDay("");
     setStartDate("");
     setEndDate("");
@@ -45,7 +45,7 @@ const AddProject = () => {
       manpowerFactory,
       workingTime,
       breakTime,
-      overTime,
+      totalOverTime,
       offDay,
       startDate,
       endDate,
@@ -133,8 +133,8 @@ const AddProject = () => {
                   type="number"
                   placeholder="Over time"
                   className="inputElm"
-                  value={overTime}
-                  onChange={(e) => setOverTime(e.target.value)}
+                  value={totalOverTime}
+                  onChange={(e) => setTotalOverTime(e.target.value)}
                 />
               </div>
               <div className="w-1/2">

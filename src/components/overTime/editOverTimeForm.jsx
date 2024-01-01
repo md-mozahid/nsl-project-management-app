@@ -113,8 +113,8 @@ const EditOverTimeForm = ({ overTimes }) => {
                 type="text"
                 placeholder="Remarks"
                 className="inputElm"
-                value={remarksOt}
-                onChange={(e) => setRemarksOt(e.target.value)}
+                value={remarks}
+                onChange={(e) => setRemarks(e.target.value)}
                 cols="30"
                 rows="2"
               />

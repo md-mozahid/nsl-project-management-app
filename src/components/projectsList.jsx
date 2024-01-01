@@ -14,7 +14,7 @@ const ProjectsList = () => {
   }
 
   if (!isLoading && isError) {
-    content = <p className="text-rose-500">That was an error !</p>
+    content = <p className="text-rose-500 text-3xl">That was an error !</p>
   }
   if (!isLoading && !isError && projects.length === 0) {
     content = <p className="text-rose-500">No projects found!</p>

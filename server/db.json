@@ -4,7 +4,7 @@
       "id": 1,
       "projectName": "Baridhara Pavilion (KSBL)",
       "manpowerSite": "12",
-      "manpowerFactory": "2",
+      "manpowerFactory": "4",
       "projectHead": "Engr. Sujon/Rafiq ***One foreman is in leave and will join in s.alam site. ",
       "workingTime": "8am - 5pm",
       "breakTime": "1hr",
@@ -12,7 +12,8 @@
       "offDay": "1-Friday (In running month)",
       "remarks": "Framing Erection completed, Tightening and Decking work in progress. Target to finish within 05/01/2024",
       "startDate": "",
-      "endDate": ""
+      "endDate": "",
+      "overTime": "0"
     },
     {
       "id": 2,

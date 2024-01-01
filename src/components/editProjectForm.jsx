@@ -15,7 +15,7 @@ const EditProjectForm = ({ project }) => {
     projectHead: initialProjectHead,
     workingTime: initialWorkingTime,
     breakTime: initialBreakTime,
-    overTime: initialOverTime,
+    totalOverTime: initialTotalOverTime,
     offDay: initialOffDay,
     startDate: initialStartDate,
     endDate: initialEndDate,
@@ -29,7 +29,7 @@ const EditProjectForm = ({ project }) => {
     initialManpowerFactory
   );
   const [workingTime, setWorkingTime] = useState(initialWorkingTime);
-  const [overTime, setOverTime] = useState(initialOverTime);
+  const [totalOverTime, setTotalOverTime] = useState(initialTotalOverTime);
   const [breakTime, setBreakTime] = useState(initialBreakTime);
   const [offDay, setOffDay] = useState(initialOffDay);
   const [startDate, setStartDate] = useState(initialStartDate);
@@ -43,7 +43,7 @@ const EditProjectForm = ({ project }) => {
     setManpowerSite("");
     setManpowerFactory("");
     setWorkingTime("");
-    setOverTime("");
+    setTotalOverTime("");
     setBreakTime("");
     setOffDay("");
     setStartDate("");
@@ -64,7 +64,7 @@ const EditProjectForm = ({ project }) => {
         manpowerFactory,
         workingTime,
         breakTime,
-        overTime,
+        totalOverTime,
         offDay,
         startDate,
         endDate,
@@ -160,8 +160,8 @@ const EditProjectForm = ({ project }) => {
                   type="number"
                   placeholder="Over time"
                   className="inputElm"
-                  value={overTime}
-                  onChange={(e) => setOverTime(e.target.value)}
+                  value={totalOverTime}
+                  onChange={(e) => setTotalOverTime(e.target.value)}
                 />
               </div>
               <div className="w-1/2">
