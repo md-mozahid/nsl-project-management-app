@@ -3,8 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    // baseUrl: "https://nsl-projects-server.onrender.com",
-    baseUrl: "http://localhost:3000",
+    baseUrl: "https://nsl-projects-server.onrender.com",
+    // baseUrl: "http://localhost:3000",
   }),
 
   endpoints: (builder) => ({
